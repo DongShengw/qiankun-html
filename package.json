@@ -1,0 +1,26 @@
+{
+  "name": "qiankun-my",
+  "version": "1.0.0",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:base": "cd qiankun-base && npm i",
+    "install:qiankun-vue-mall": "cd qiankun-vue-mall && npm i",
+    "install:qiankun-vue-weather": "cd qiankun-vue-weather && npm i",
+    "install:qiankun-react-demo": "cd qiankun-react-demo && npm i",
+    "install:qiankun-html": "cd qiankun-html && npm i",
+    "start": "npm-run-all --parallel start:*",
+    "start:qiankun-vue-mall": "cd qiankun-vue-mall && npm run serve",
+    "start:qiankun-vue-weather": "cd qiankun-vue-weather && npm run serve",
+    "start:qiankun-react-demo": "cd qiankun-react-demo && npm start",
+    "start:qiankun-html": "cd qiankun-html && npm run start",
+    "start:base": "cd qiankun-base && npm run serve"
+  },
+  "keywords": [
+    "qiankun",
+    "demo"
+  ],
+  "author": "wsd"
+}
